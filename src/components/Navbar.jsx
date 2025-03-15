@@ -19,7 +19,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
         >
           <a 
             href="#home" 
-            className="font-mono text-xl font-bold text-white"
+            className="font-mono text-xl font-bold text-black"
           > 
             Timothy<span className="text-blue-500">.tech</span>
           </a>
@@ -36,25 +36,25 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           >
             <a 
               href="#home" 
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-black hover:text-gray-400 transition-colors"
             >
               Home 
             </a>
             <a 
               href="#about" 
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-black hover:text-gray-400 transition-colors"
             >
               About 
             </a>
             <a 
               href="#projects" 
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-black hover:text-gray-400 transition-colors"
             >
               Projects 
             </a>
             <a 
               href="#contact" 
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-black hover:text-gray-400 transition-colors"
             >
               Contact
             </a>

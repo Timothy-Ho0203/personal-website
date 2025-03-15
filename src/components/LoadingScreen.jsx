@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 export const LoadingScreen = ({ onComplete }) => {
   const [text, setText] = useState("");
-  const fullText = "<Hello World />"; //end state of text to be shown
+  const fullText = "<Loading />"; //end state of text to be shown
 
   useEffect(() => {
     let index = 0;
@@ -29,7 +29,7 @@ export const LoadingScreen = ({ onComplete }) => {
       <div 
         className="mb-4 text-4xl font-mono font-bold"
       >
-        {text} <span className="animate-blink ml-1"> | </span>
+        {text} <span className="animate-blink ml-1">| </span>
       </div>
 
       <div 

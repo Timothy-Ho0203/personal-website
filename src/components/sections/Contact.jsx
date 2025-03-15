@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from 'emailjs-com';
+import github from "../../assets/github.png";
+import linkedin from "../../assets/linkedin.png";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,10 +33,41 @@ export const Contact = () => {
       <RevealOnScroll>
         <div className="px-4 w-150">
           <h2 
-            className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center"
+            className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center"
           > 
             Get In Touch 
           </h2>
+          <div className="">
+            <p className="text-xl text-black font-bold text-center">
+              Let's Connect
+            </p>
+            <div className="flex items-center justify-evenly mb-4 mt-2" >
+              <a 
+                className=""
+                href="https://www.linkedin.com/in/timothy-josef-ho/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img 
+                  className="icon rounded-lg w-12 h-12 hover:-translate-y-1 hover:shadow-lg transition-shadow duration-300 mix-blend-multiply" 
+                  src={linkedin} 
+                  alt="Linkedin" 
+                />
+              </a>
+              <a
+                className="rounded-full overflow-hidden"
+                href="https://github.com/Timothy-Ho0203"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img 
+                  className="icon rounded-lg w-12 h-12 hover:-translate-y-1 hover:shadow-lg transition-shadow duration-300 mix-blend-multiply object-cover"                 
+                  src={github} 
+                  alt="GitHub" 
+                />
+              </a> 
+            </div>
+          </div>
           <form action="" className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative">
               <input 
@@ -43,7 +76,7 @@ export const Contact = () => {
                 name="name" 
                 required
                 value={formData.name} 
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-full bg-black/5 border border-black/10 rounded px-4 py-3 text-black transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="Name..."
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
               />
@@ -56,7 +89,7 @@ export const Contact = () => {
                 name="email" 
                 required
                 value={formData.email} 
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-full bg-black/5 border border-black/10 rounded px-4 py-3 text-black transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="example@gmail.com"
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
               />
@@ -69,7 +102,7 @@ export const Contact = () => {
                 required 
                 rows = {5}
                 value={formData.message}
-                className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
+                className="w-full bg-black/5 border border-black/10 rounded px-4 py-3 text-black transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="Your Message here..."
                 onChange={(e) => setFormData({...formData, message: e.target.value})}
               />

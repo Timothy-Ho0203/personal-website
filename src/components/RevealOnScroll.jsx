@@ -9,6 +9,8 @@ export const RevealOnScroll = ({children}) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           ref.current.classList.add("visible");
+        } else {
+          ref.current.classList.remove("visible");
         }
       }, {threshold: 0.2, rootMargin: "0px 0px -50px 0px"}
     );
@@ -20,7 +22,6 @@ export const RevealOnScroll = ({children}) => {
   return (
       <div ref={ref} className="reveal">
         {children}
-
       </div>
     )
 }

@@ -34,6 +34,71 @@ html, body {
   .animate-loading-bar {
     animation: loading 0.8s ease infinite;
   }
+
+  
+  .profile-container {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .profile-container::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(
+      rgba(0, 157, 255, 1) 0deg,
+      rgba(0, 157, 255, 0.7) 15deg,
+      rgba(0, 157, 255, 0.3) 30deg,
+      transparent 40deg,
+
+      rgba(0, 157, 255, 1) 120deg,
+      rgba(0, 157, 255, 0.7) 135deg,
+      rgba(0, 157, 255, 0.3) 150deg,
+      transparent 160deg,
+
+      rgba(0, 157, 255, 1) 240deg,
+      rgba(0, 157, 255, 0.7) 255deg,
+      rgba(0, 157, 255, 0.3) 270deg,
+      transparent 280deg
+    );
+    filter: blur(1.5rem);
+    opacity: 0.6;
+    animation: spin 7s linear infinite;
+  }
+
+  .profile-picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 2;
+  }
+
+  @property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  @keyframes spin {
+    0% {
+      --angle: 0deg;
+    }
+    100% {
+      --angle: 360deg;
+    }
+  }
+  .animate-spin {
+    animation: spin 7s linear infinite;
+  }
 }
 
 .reveal {
@@ -45,4 +110,9 @@ html, body {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
 }

@@ -14,15 +14,15 @@ export const Projects = () => {
             Featured Projects 
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
             <div 
-              className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 
+              className="p-6 rounded-xl border border-black/10 hover:-translate-y-1 hover:border-blue-500/30 
                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
             >
               <h3 className="text-xl font-bold mb-2"> 
                 NUS Datathon 
               </h3>
-              <p className="text-gray-400 mb-4"> 
+              <p className="text-black mb-4"> 
                 NUS Datathon Cat A that aims to create an efficient Financial Agent Recommendation System
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -49,13 +49,13 @@ export const Projects = () => {
             </div>
 
             <div 
-              className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 
+              className="p-6 rounded-xl border border-black/10 hover:-translate-y-1 hover:border-blue-500/30 
                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
             >
               <h3 className="text-xl font-bold mb-2"> 
                 Smart Glasses Bootcamp 
               </h3>
-              <p className="text-gray-400 mb-4"> 
+              <p className="text-black-400 mb-4"> 
                 AI Item Recommendation Smart Glasses using Microsoft Hololens 2
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
