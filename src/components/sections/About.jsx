@@ -103,7 +103,13 @@ export const About = () => {
                   <strong> B.S in Computer Science </strong> - National University of Singapore (2023 - Present)
                 </li>
                 <li>
-                  Relevant Courses: Data Structures and Algorithms
+                  <strong>Relevant Courses:</strong><br />
+                  Object Orientated Programming<br />
+                  Data Structures and Algorithms<br />
+                  Computer Networks<br />
+                  Computer Organisation<br />
+                  Software Engineering<br />
+                  AI and Machine Learning<br />
                 </li>
               </ul>
             </div>
@@ -117,7 +123,11 @@ export const About = () => {
               <div className="space-y-4 text-black-300">
                 <div>
                   <h4 className="font-semibold"> AI Researcher at NUS </h4>
-                  <p> Researched Exposure Bias in DDPMs </p>
+                  <p> 
+                    •	Researched and presented a literature review on Exposure Bias problem prevalent in Large Language Models (LLM), particularly Denoising Diffusion Probabilistic Models (DDPM)<br />
+                    •	Implemented and recorded 3 different metrics to evaluate the seriousness of exposure bias and attempted to quantify it<br />
+                    •	Incorporated metrics with HuggingFace Diffusers and Transformers and tested them on external GPUs
+                  </p>
                 </div>
               </div>
             </div>

@@ -8,7 +8,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
   return (
     <nav 
-      className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b 
+      className="fixed top-0 w-full z-40 bg-[rgba(255, 255, 255, 0.8)] backdrop-blur-lg border-b 
         border-white/10 shadow-lg"
     >
       <div 
@@ -25,7 +25,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           </a>
 
           <div 
-            className="w-7 h-5 relative cursor-pointer z-40 md:hidden" 
+            className="w-7 h-5 relative cursor-pointer z-40 md:hidden text-black" 
             onClick={() => setMenuOpen((prev) => !prev)}
           >
             &#9776;
