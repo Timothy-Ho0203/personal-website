@@ -1,3 +1,4 @@
+import { Cheatsheets } from "../Cheatsheets";
 import {RevealOnScroll} from "../RevealOnScroll";
 
 export const About = () => {
@@ -100,17 +101,19 @@ export const About = () => {
               </h3>
               <ul className="list-disc list-inside text-black-300 space-y-2">
                 <li>
-                  <strong> B.S in Computer Science </strong> - National University of Singapore (2023 - Present)
+                  <strong> B.S in Computer Science </strong> - National University of Singapore (2023 - Present) <br />
+                  <span>
+                    <strong>Relevant Courses:</strong><br />
+                    Object Orientated Programming<br />
+                    Data Structures and Algorithms<br />
+                    Computer Networks<br />
+                    Computer Organisation<br />
+                    Software Engineering<br />
+                    AI and Machine Learning<br />
+                  </span>
+                  <Cheatsheets />
                 </li>
-                <li>
-                  <strong>Relevant Courses:</strong><br />
-                  Object Orientated Programming<br />
-                  Data Structures and Algorithms<br />
-                  Computer Networks<br />
-                  Computer Organisation<br />
-                  Software Engineering<br />
-                  AI and Machine Learning<br />
-                </li>
+                
               </ul>
             </div>
 
