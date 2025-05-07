@@ -5,6 +5,16 @@ export const Cheatsheets = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
+  const getDownloadLink = async (filename) => {
+    try {
+      const response = await fetch(`/cheatsheets/${filename}`, { cache: "no-store"});
+      const { url } = await response.json();
+      window.open(url, '_blank');
+    } catch (error) {
+      console.log("There was an error opening the file");
+    } 
+  };
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -43,22 +53,29 @@ export const Cheatsheets = () => {
             <li 
               className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             >
-              <a href="#"> 
+              <a href="#" onClick={() =>getDownloadLink('ST2334_finals.pdf')}> 
                 ST2334 Finals 
               </a>
             </li>
             <li 
               className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             >
-              <a href="#"> 
+              <a href="#" onClick={() =>getDownloadLink('CS2106_midterms.pdf')}> 
                 CS2106 Midterms 
               </a>
             </li>
             <li 
               className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             >
-              <a href="#">
+              <a href="#" onClick={() =>getDownloadLink('CS2106_finals.pdf')}>
                 CS2106 Finals
+              </a>
+            </li>
+            <li 
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+            >
+              <a href="#" onClick={() =>getDownloadLink('CS2102_finals.pdf')}> 
+                CS2102 Finals 
               </a>
             </li>
           </ul>
