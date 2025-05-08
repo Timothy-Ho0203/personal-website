@@ -4,8 +4,7 @@ import {RevealOnScroll} from "../RevealOnScroll";
 export const About = () => {
   
   const frontendSkills = [
-    "React", 
-    "Vue", 
+    "React",  
     "TypeScript",
     "TailwindCSS",
   ]
@@ -14,7 +13,7 @@ export const About = () => {
     "Node.js", 
     "Python", 
     "PostgreSQL",
-    "MongoDB",
+    "Express",
   ];
 
   return (
@@ -104,10 +103,12 @@ export const About = () => {
                   <strong> B.S in Computer Science </strong> - National University of Singapore (2023 - Present) <br />
                   <span>
                     <strong>Relevant Courses:</strong><br />
-                    Object Orientated Programming<br />
+                    Object Oriented Programming<br />
                     Data Structures and Algorithms<br />
+                    Databases<br />
                     Computer Networks<br />
                     Computer Organisation<br />
+                    Operating System<br />
                     Software Engineering<br />
                     AI and Machine Learning<br />
                   </span>

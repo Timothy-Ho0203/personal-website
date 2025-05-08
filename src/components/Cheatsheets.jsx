@@ -1,9 +1,29 @@
 import { useEffect, useRef, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
 
 export const Cheatsheets = () => {
+  const supabase = createClient(
+      import.meta.env.VITE_SUPABASE_URL,
+      import.meta.env.VITE_SUPABASE_ANON_KEY
+  )
 
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
+
+  const getDownloadLink = async (filename) => {
+    try {
+      const { data, error } = await supabase
+        .storage
+        .from("cheatsheets")
+        .getPublicUrl(filename, 3600);
+
+      console.log(data);
+      window.open(data.publicUrl, '_blank');
+    } catch (error) {
+      console.log(error);
+      console.log("There was an error opening the file");
+    } 
+  };
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -43,22 +63,29 @@ export const Cheatsheets = () => {
             <li 
               className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             >
-              <a href="#"> 
+              <a href="#about" onClick={() =>getDownloadLink('ST2334_finals.pdf')}> 
                 ST2334 Finals 
               </a>
             </li>
             <li 
               className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             >
-              <a href="#"> 
+              <a href="#about" onClick={() =>getDownloadLink('CS2106_midterms.pdf')}> 
                 CS2106 Midterms 
               </a>
             </li>
             <li 
               className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
             >
-              <a href="#">
+              <a href="#about" onClick={() =>getDownloadLink('CS2106_finals.pdf')}>
                 CS2106 Finals
+              </a>
+            </li>
+            <li 
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+            >
+              <a href="#about" onClick={() =>getDownloadLink('CS2102_finals.pdf')}> 
+                CS2102 Finals 
               </a>
             </li>
           </ul>
