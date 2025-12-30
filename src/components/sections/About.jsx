@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import { Cheatsheets } from "../Cheatsheets";
 
 export const About = () => {
   const frontendSkills = ["React", "TypeScript", "TailwindCSS"];
@@ -87,7 +88,7 @@ export const About = () => {
                     AI and Machine Learning
                     <br />
                   </span>
-                  {/* <Cheatsheets /> */}
+                  <Cheatsheets />
                 </li>
               </ul>
             </div>
