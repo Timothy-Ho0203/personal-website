@@ -9,20 +9,20 @@ export const Projects = () => {
       <RevealOnScroll>
         <div className="max-w-5xl mx-auto px-4">
           <h2 
-            className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center"
+            className="text-2xl sm:text-3xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center"
           > 
             Featured Projects 
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-black">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 text-black">
             <div 
-              className="p-6 rounded-xl border border-black/10 hover:-translate-y-1 hover:border-blue-500/30 
+              className="p-4 sm:p-6 rounded-xl border border-black/10 hover:-translate-y-1 hover:border-blue-500/30 
                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
             >
-              <h3 className="text-xl font-bold mb-2"> 
+              <h3 className="text-lg sm:text-xl font-bold mb-2"> 
                 NUS Datathon 
               </h3>
-              <p className="text-black mb-4"> 
+              <p className="text-black mb-4 text-sm sm:text-base"> 
                 NUS Datathon Cat A that aims to create an efficient Financial Agent Recommendation System
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -49,13 +49,13 @@ export const Projects = () => {
             </div>
 
             <div 
-              className="p-6 rounded-xl border border-black/10 hover:-translate-y-1 hover:border-blue-500/30 
+              className="p-4 sm:p-6 rounded-xl border border-black/10 hover:-translate-y-1 hover:border-blue-500/30 
                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
             >
-              <h3 className="text-xl font-bold mb-2"> 
+              <h3 className="text-lg sm:text-xl font-bold mb-2"> 
                 Smart Glasses Bootcamp 
               </h3>
-              <p className="text-black-400 mb-4"> 
+              <p className="text-black-400 mb-4 text-sm sm:text-base"> 
                 AI Item Recommendation Smart Glasses using Microsoft Hololens 2
               </p>
               <div className="flex flex-wrap gap-2 mb-4">

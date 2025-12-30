@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { useRef } from "react"
+import { useRef } from "react";
 
-export const RevealOnScroll = ({children}) => {
-  const ref = useRef(null);  
-  
+export const RevealOnScroll = ({ children }) => {
+  const ref = useRef(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -12,16 +12,17 @@ export const RevealOnScroll = ({children}) => {
         } else {
           ref.current.classList.remove("visible");
         }
-      }, {threshold: 0.2, rootMargin: "0px 0px -50px 0px"}
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -50px 0px" }
     );
 
     if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
-  })
+  });
   return (
-      <div ref={ref} className="reveal">
-        {children}
-      </div>
-    )
-}
+    <div ref={ref} className="reveal w-full">
+      {children}
+    </div>
+  );
+};

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import github from "../../assets/github.png";
 import linkedin from "../../assets/linkedin.png";
 
@@ -12,113 +12,115 @@ export const Contact = () => {
   });
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     emailjs
       .sendForm(
-        import.meta.env.VITE_SERVICE_ID, 
-        import.meta.env.VITE_TEMPLATE_ID, 
-        e.target, 
-        import.meta.env.VITE_PUBLIC_KEY)
-      .then((result) => {
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then(() => {
         alert("Message sent!");
-        setFormData({name: "", email: "", message: ""});
-      }).catch(() => alert("Oops! Something went wrong. PLease try again."));
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch(() => alert("Oops! Something went wrong. PLease try again."));
   };
 
   return (
-    <section 
-      id="contact" 
+    <section
+      id="contact"
       className="min-h-screen flex items-center justify-center py-20"
     >
       <RevealOnScroll>
-        <div className="px-4 w-150">
-          <h2 
-            className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center"
-          > 
-            Get In Touch 
+        <div className="w-full max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+            Get In Touch
           </h2>
-          <div className="">
-            <p className="text-xl text-black font-bold text-center">
-              Let's Connect
-            </p>
-            <div className="flex items-center justify-evenly mb-4 mt-2" >
-              <a 
-                className=""
-                href="https://www.linkedin.com/in/timothy-josef-ho/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img 
-                  className="icon rounded-lg w-12 h-12 hover:-translate-y-1 hover:shadow-lg transition-shadow duration-300 mix-blend-multiply" 
-                  src={linkedin} 
-                  alt="Linkedin" 
-                />
-              </a>
-              <a
-                className="rounded-full overflow-hidden"
-                href="https://github.com/Timothy-Ho0203"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img 
-                  className="icon rounded-lg w-12 h-12 hover:-translate-y-1 hover:shadow-lg transition-shadow duration-300 mix-blend-multiply object-cover"                 
-                  src={github} 
-                  alt="GitHub" 
-                />
-              </a> 
-            </div>
+          <p className="text-lg sm:text-xl text-black font-bold text-center mb-4">
+            Let&apos;s Connect
+          </p>
+          <div className="flex items-center justify-center gap-8 mb-6 md:mb-8">
+            <a
+              className=""
+              href="https://www.linkedin.com/in/timothy-josef-ho/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="icon rounded-lg w-12 h-12 hover:-translate-y-1 hover:shadow-lg transition-shadow duration-300 mix-blend-multiply"
+                src={linkedin}
+                alt="Linkedin"
+              />
+            </a>
+            <a
+              className="rounded-full overflow-hidden"
+              href="https://github.com/Timothy-Ho0203"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="icon rounded-lg w-12 h-12 hover:-translate-y-1 hover:shadow-lg transition-shadow duration-300 mix-blend-multiply object-cover"
+                src={github}
+                alt="GitHub"
+              />
+            </a>
           </div>
           <form action="" className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative">
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
+              <input
+                type="text"
+                id="name"
+                name="name"
                 required
-                value={formData.name} 
+                value={formData.name}
                 className="w-full bg-black/5 border border-black/10 rounded px-4 py-3 text-black transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="Name..."
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
               />
             </div>
 
             <div className="relative">
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
+              <input
+                type="email"
+                id="email"
+                name="email"
                 required
-                value={formData.email} 
+                value={formData.email}
                 className="w-full bg-black/5 border border-black/10 rounded px-4 py-3 text-black transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="example@gmail.com"
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
               />
             </div>
 
             <div className="relative">
-              <textarea 
-                id="message" 
-                name="message" 
-                required 
-                rows = {5}
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={5}
                 value={formData.message}
                 className="w-full bg-black/5 border border-black/10 rounded px-4 py-3 text-black transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
                 placeholder="Your Message here..."
-                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
               />
             </div>
-            
-            <button 
-              type="submit" 
-              className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+            >
               Send Message
             </button>
-
           </form>
         </div>
-
       </RevealOnScroll>
-
     </section>
-  )
-}
+  );
+};
