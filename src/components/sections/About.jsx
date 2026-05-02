@@ -91,24 +91,7 @@ export const About = () => {
               </ul>
             </InfoCard>
 
-            <InfoCard title="Work Experience" className="p-4 sm:p-6">
-              <div className="space-y-4 text-black-300 text-sm sm:text-base">
-                <div>
-                  <h4 className="font-semibold"> AI Researcher at NUS </h4>
-                  <p className="text-sm sm:text-base">
-                    • Researched and presented a literature review on Exposure
-                    Bias problem prevalent in Large Language Models (LLM),
-                    particularly Denoising Diffusion Probabilistic Models (DDPM)
-                    <br />
-                    • Implemented and recorded 3 different metrics to evaluate
-                    the seriousness of exposure bias and attempted to quantify
-                    it
-                    <br />• Incorporated metrics with HuggingFace Diffusers and
-                    Transformers and tested them on external GPUs
-                  </p>
-                </div>
-              </div>
-            </InfoCard>
+
           </div>
         </div>
       </RevealOnScroll>

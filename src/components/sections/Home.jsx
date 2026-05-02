@@ -26,7 +26,7 @@ export const Home = () => {
             <p 
               className="text-gray-700 text-base sm:text-lg mb-6 md:mb-8 max-w-lg mx-auto px-2"
             >
-              I'm a Year 2 Computer Science student at NUS, passionate about AI, Software Development and creating technology-driven solutions.
+              I'm a Year 3 Computer Science student at NUS, passionate about AI, Software Development and creating technology-driven solutions.
 
             </p>
             <div
