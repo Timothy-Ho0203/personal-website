@@ -1,5 +1,6 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import { Cheatsheets } from "../Cheatsheets";
+import { InfoCard } from "../InfoCard";
 
 export const About = () => {
   const frontendSkills = ["React", "TypeScript", "TailwindCSS"];
@@ -16,7 +17,7 @@ export const About = () => {
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 md:mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             About me
           </h2>
-          <div className="rounded-xl p-4 sm:p-6 md:p-8 border-black/10 border hover:-translate-y-1 transition-all">
+          <InfoCard className="p-4 sm:p-6 md:p-8">
             <p className="text-black mb-4 md:mb-6 text-sm sm:text-base">
               Passionate developer with expertise in building scalable web
               applications and creating innovative solutions.
@@ -57,13 +58,10 @@ export const About = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </InfoCard>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-6 md:mt-8">
-            <div className="p-4 sm:p-6 rounded-xl border-black/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-lg sm:text-xl font-bold mb-3 md:mb-4">
-                Education
-              </h3>
+          <div className="flex flex-col gap-4 md:gap-6 mt-6 md:mt-8">
+            <InfoCard title="Education" className="p-4 sm:p-6">
               <ul className="list-disc list-inside text-black-300 space-y-2 text-sm sm:text-base">
                 <li>
                   <strong> B.S in Computer Science </strong> - National
@@ -91,12 +89,9 @@ export const About = () => {
                   <Cheatsheets />
                 </li>
               </ul>
-            </div>
+            </InfoCard>
 
-            <div className="p-4 sm:p-6 rounded-xl border-black/10 border hover:-translate-y-1 transition-all">
-              <h3 className="text-lg sm:text-xl font-bold mb-3 md:mb-4">
-                Work Experience
-              </h3>
+            <InfoCard title="Work Experience" className="p-4 sm:p-6">
               <div className="space-y-4 text-black-300 text-sm sm:text-base">
                 <div>
                   <h4 className="font-semibold"> AI Researcher at NUS </h4>
@@ -113,7 +108,7 @@ export const About = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </InfoCard>
           </div>
         </div>
       </RevealOnScroll>
