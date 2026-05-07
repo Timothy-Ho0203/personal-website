@@ -16,7 +16,7 @@ export const WorkExperience = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-cyan-400" />
+          <div className="absolute left-5 top-4 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-cyan-400" />
 
           <div className="flex flex-col gap-10">
             {experiences.map((exp) => (

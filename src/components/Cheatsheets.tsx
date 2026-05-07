@@ -8,25 +8,25 @@ export const Cheatsheets = () => {
   );
 
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const getDownloadLink = async (filename) => {
+  const getDownloadLink = async (filename: string) => {
     try {
-      const { data, error } = await supabase.storage
+      const { data } = await supabase.storage
         .from("cheatsheets")
-        .getPublicUrl(filename, 3600);
+        .getPublicUrl(filename);
 
       console.log(data);
       window.open(data.publicUrl, "_blank");
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
       console.log("There was an error opening the file");
     }
   };
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     }

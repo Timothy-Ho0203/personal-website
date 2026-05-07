@@ -1,16 +1,19 @@
-import { useEffect } from "react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
-export const RevealOnScroll = ({ children }) => {
-  const ref = useRef(null);
+interface RevealOnScrollProps {
+  children: React.ReactNode;
+}
+
+export const RevealOnScroll = ({ children }: RevealOnScrollProps) => {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          ref.current.classList.add("visible");
+          ref.current?.classList.add("visible");
         } else {
-          ref.current.classList.remove("visible");
+          ref.current?.classList.remove("visible");
         }
       },
       { threshold: 0.2, rootMargin: "0px 0px -50px 0px" }

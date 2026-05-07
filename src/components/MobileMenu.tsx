@@ -1,4 +1,9 @@
-export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
+interface MobileMenuProps {
+  menuOpen: boolean;
+  setMenuOpen: (value: boolean) => void;
+}
+
+export const MobileMenu = ({ menuOpen, setMenuOpen }: MobileMenuProps) => {
 
   return (
     <div 

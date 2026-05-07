@@ -1,4 +1,10 @@
-export const InfoCard = ({ title, children, className = "" }) => {
+interface InfoCardProps {
+  title?: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const InfoCard = ({ title, children, className = "" }: InfoCardProps) => {
   return (
     <div
       className={`rounded-xl border-black/10 border hover:-translate-y-1 transition-all ${className}`}
