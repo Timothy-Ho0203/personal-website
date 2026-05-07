@@ -15,7 +15,37 @@ export const WorkExperience = () => {
 
           <div className="flex flex-col gap-4 md:gap-6">
             <InfoCard className="p-4 sm:p-6">
-              <h4 className="font-semibold mb-2">Backend Engineer Intern at ShopBack</h4>
+              <h4 className="font-semibold mb-2">Software Engineer Intern | QCP Capital</h4>
+              <p className="text-sm sm:text-base text-black-300">
+                • Built a RAG-powered ticket generation system by chunking and embedding 3 core
+                service repositories into a Chroma vector database with OpenAI embeddings, enabling
+                semantic search over codebases to auto-generate structured ticket descriptions,
+                reducing ambiguity in product requirements for the engineering team.
+                <br />
+                • Resolved a data integrity bug where unknown fields were silently dropped during
+                deserialisation on round-trip API calls to a third-party service, implementing a
+                passthrough map to preserve unmapped fields and ensure forward compatibility with
+                evolving API contracts.
+                <br />
+                • Diagnosed and fixed a race condition causing duplicate OTP verification requests
+                to AWS, tracing the root cause to unintended router remounts from a faulty useEffect
+                dependency; refactored the feature flag guard into a reusable wrapper component
+                scoped below the router to prevent cascading state propagation.
+                <br />
+                • Migrated legacy API calls across multiple services to current internal endpoints
+                using feature-flag-based rollout for safe, zero-downtime deployment; investigated
+                and resolved legacy event handling bugs that surfaced the need for broader service
+                migration.
+                <br />
+                • Replaced nested conditional logic for client status transitions with a Spring State
+                Machine, improving scalability and maintainability; also implemented event handlers
+                for KYB form workflows, an S3 file upload endpoint, and async notifications for
+                profile approval events.
+              </p>
+            </InfoCard>
+
+            <InfoCard className="p-4 sm:p-6">
+              <h4 className="font-semibold mb-2">Backend Engineer Intern | ShopBack</h4>
               <p className="text-sm sm:text-base text-black-300">
                 • Scaled high-traffic service APIs used in core application flows, improving P95
                 latency by 20% through optimization techniques such as pagination and caching.
@@ -40,7 +70,7 @@ export const WorkExperience = () => {
             </InfoCard>
 
             <InfoCard className="p-4 sm:p-6">
-              <h4 className="font-semibold mb-2">AI Researcher at NUS</h4>
+              <h4 className="font-semibold mb-2">AI Researcher | NUS</h4>
               <p className="text-sm sm:text-base text-black-300">
                 • Conducted literature review on Exposure Bias on Denoising Diffusion Probabilistic
                 Models (DDPM).
