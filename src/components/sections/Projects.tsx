@@ -20,6 +20,52 @@ export const Projects = () => {
                 hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
             >
               <h3 className="text-lg sm:text-xl font-bold mb-2"> 
+                2048 Solver 
+              </h3>
+              <p className="text-black mb-4 text-sm sm:text-base"> 
+                Built an actor-critic RL agent for 2048 using policy and value function optimization with GAE, deployed via FastAPI to serve move predictions to a React frontend.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["Python", "PyTorch", "React", "FastAPI"].map((tech, key) => (
+                  <span 
+                    key={key} 
+                    className="bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full text-sm hover:bg-blue-500/20 
+                    hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)] transition"
+                  >
+                  {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div 
+              className="p-4 sm:p-6 rounded-xl border border-black/10 hover:-translate-y-1 hover:border-blue-500/30 
+                hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
+            >
+              <h3 className="text-lg sm:text-xl font-bold mb-2"> 
+                DSTA BrainHack Code_EXP 
+              </h3>
+              <p className="text-black mb-4 text-sm sm:text-base"> 
+                Built an iOS application leveraging blockchain for ticket authenticity and secure secondary sales, with smart contracts on Ethereum, AWS Lambda/DynamoDB, and LLM-based anomaly detection.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["TypeScript", "Express", "AWS"].map((tech, key) => (
+                  <span 
+                    key={key} 
+                    className="bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full text-sm hover:bg-blue-500/20 
+                    hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.2)] transition"
+                  >
+                  {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div 
+              className="p-4 sm:p-6 rounded-xl border border-black/10 hover:-translate-y-1 hover:border-blue-500/30 
+                hover:shadow-[0_2px_8px_rgba(59, 130, 246, 0.1)] transition-all"
+            >
+              <h3 className="text-lg sm:text-xl font-bold mb-2"> 
                 NUS Datathon 
               </h3>
               <p className="text-black mb-4 text-sm sm:text-base"> 
