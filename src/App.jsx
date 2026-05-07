@@ -8,6 +8,7 @@ import { About } from './components/sections/About';
 import { WorkExperience } from './components/sections/WorkExperience';
 import { Projects } from './components/sections/Projects';
 import { Contact } from './components/sections/Contact';
+import { TimelineNav } from './components/TimelineNav';
 import "./index.css";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <TimelineNav />
         <Home />
         <About />
         <WorkExperience />
