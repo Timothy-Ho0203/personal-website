@@ -8,10 +8,23 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: "exp-visa",
+    title: "DevOps Engineer Intern",
+    company: "Visa",
+    dates: "May 2026 – July 2026",
+    bullets: [
+      "Integrated Vault-based secrets management with mTLS and asynchronous credential loading, removing plaintext production secrets while preserving local development workflows.",
+      "Standardized secure HTTPS clients and configured corporate CA trust, enforcing TLS certificate validation across external and internal service integrations.",
+      "Built a Jenkins and PM2 deployment pipeline that bundles dependencies and automates deployments previously performed through manual server access.",
+      "Implemented tenant isolation across pipeline, execution, orchestration, and AI routes, backed by more than 1,000 lines of tests.",
+      "Delivered end-to-end reactive pipeline parameters with Artifactory-backed resolution and unified configuration across seven or more frontend entry points.",
+    ],
+  },
+  {
     id: "exp-0",
     title: "Software Engineer Intern",
     company: "QCP Capital",
-    dates: "Jan 2026 – May 2026", // TODO: update with actual dates
+    dates: "Jan 2026 – May 2026",
     bullets: [
       "Built a RAG-powered ticket generation system by chunking and embedding 3 core service repositories into a Chroma vector database with OpenAI embeddings, enabling semantic search over codebases to auto-generate structured ticket descriptions, reducing ambiguity in product requirements for the engineering team.",
       "Resolved a data integrity bug where unknown fields were silently dropped during deserialisation on round-trip API calls to a third-party service, implementing a passthrough map to preserve unmapped fields and ensure forward compatibility with evolving API contracts.",
@@ -24,7 +37,7 @@ export const experiences: Experience[] = [
     id: "exp-1",
     title: "Backend Engineer Intern",
     company: "ShopBack",
-    dates: "May 2025 – Dec 2025", // TODO: update with actual dates
+    dates: "May 2025 – Dec 2025",
     bullets: [
       "Scaled high-traffic service APIs used in core application flows, improving P95 latency by 20% through optimization techniques such as pagination and caching.",
       "Reduced database load by 30% through cache integration and query optimization for high-traffic endpoints.",
@@ -38,7 +51,7 @@ export const experiences: Experience[] = [
     id: "exp-2",
     title: "AI Researcher",
     company: "NUS",
-    dates: "May 2024 – Aug 2024", // TODO: update with actual dates
+    dates: "May 2024 – Aug 2024",
     bullets: [
       "Conducted literature review on Exposure Bias on Denoising Diffusion Probabilistic Models (DDPM).",
       "Designed and implemented three quantitative metrics using HuggingFace Diffusers/Transformers to evaluate exposure bias severity.",

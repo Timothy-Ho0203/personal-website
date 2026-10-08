@@ -52,7 +52,7 @@ export const About = () => {
                     <br />
                     Data Structures and Algorithms
                     <br />
-                    Databases
+                    Distributed Databases
                     <br />
                     Computer Networks
                     <br />
